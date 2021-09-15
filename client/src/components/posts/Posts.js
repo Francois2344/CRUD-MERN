@@ -1,7 +1,7 @@
 import React from 'react';
 import {useSelector} from 'react-redux';
 import Post from './post/Post';
-import * as dayjs from 'dayjs';
+import dayjs from 'dayjs';
 import relativeTime from 'dayjs/plugin/relativeTime';
 dayjs.extend(relativeTime);
 
@@ -18,7 +18,7 @@ export default function Posts({setId}) {
 						author={post.author}
 						title={post.title}
 						article={post.article}
-						createAt={dayjs(post.createdAt).format('MM/DD/YYYY')}
+						createAt={dayjs(post.createdAt).format('DD/MM/YYYY')}
 					/>
 				);
 			})}
